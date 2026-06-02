@@ -77,7 +77,41 @@ footer {
 footer a { color: #4a7c59; text-decoration: none; }
 footer a:hover { color: #2d5a3a; }
 
+/* ---------- Tableaux ---------- */
+.article-body .wp-block-table { margin: 1.8rem 0; overflow-x: auto; }
+.article-body table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border: 1px solid #d6e2da;
+    font-size: 0.95rem;
+    line-height: 1.45;
+}
+.article-body th,
+.article-body td {
+    padding: 0.65rem 0.95rem;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid #e6efe9;
+}
+.article-body th + th,
+.article-body td + td { border-left: 1px solid #eef4f0; }
+.article-body thead th {
+    font-weight: 700;
+    color: #fff;
+    background: #2d5a3a;
+    border-bottom: 2px solid #2d5a3a;
+    white-space: nowrap;
+}
+.article-body tbody tr:nth-child(even) { background: #f4f8f5; }
+.article-body tbody tr:last-child td { border-bottom: 0; }
+.article-body tbody td:first-child { font-weight: 600; color: #2d5a3a; }
+
 @media (max-width: 600px) {
+    .article-body table {{ font-size: 0.88rem; }}
+    .article-body th,
+    .article-body td {{ padding: 0.5rem 0.65rem; }}
+
     body { padding: 0 1rem; }
     article h1 { font-size: 1.5rem; }
     .articles-list { grid-template-columns: 1fr; }
